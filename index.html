@@ -197,7 +197,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Navigationsleiste an/ausschalten">
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -328,6 +328,201 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://757038689.github.io/2019/04/12/e/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.Yuan">
+      <meta itemprop="description" content="主要展示个人技能的小轩">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G.B.Y'blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/12/e/" class="post-title-link" itemprop="url">关于http与https的区别</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于:</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-04-12 11:24:53" itemprop="dateCreated datePublished" datetime="2019-04-12T11:24:53+08:00">2019-04-12</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/传输协议/" itemprop="url" rel="index"><span itemprop="name">传输协议</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="PHP开发遇见http与https"><a href="#PHP开发遇见http与https" class="headerlink" title="PHP开发遇见http与https"></a>PHP开发遇见http与https</h4><ul>
+<li><p>见字释义:<br>HTTP:超文本传输协议，是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从WWW服务器传输超文本到本地浏览器的传输协议，它可以使浏览器更加高效，使网络传输减少。<br>HTTPS:是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。</p>
+<blockquote>
+<pre><code>HTTPS协议的主要作用可以分为两种：一种是建立一个信息安全通道，来保证数据传输的安全；另一种就是确认网站的真实性。
+</code></pre></blockquote>
+</li>
+<li><p>HTTP与HTTPS的区别:</p>
+</li>
+</ul>
+<ol>
+<li><p>安全性:<br>http的连接很简单，是无状态的,都是未加密状态的明文；HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。</p>
+</li>
+<li><p>是否收费:<br>http 不收费，https协议需要到ca申请证书，一般免费证书较少，因而需要一定费用。</p>
+</li>
+<li><p>使用的端口不一样:<br>http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。    </p>
+</li>
+</ol>
+<ul>
+<li><p>https的加密原理:<br>[1].    客户使用https的URL访问Web服务器，要求与Web服务器建立SSL连接。<br>[2].    Web服务器收到客户端请求后，会将网站的证书信息（证书中包含公钥）传送一份给客户端。<br>[3].    客户端的浏览器与Web服务器开始协商SSL连接的安全等级，也就是信息加密的等级。<br>[4].    客户端的浏览器根据双方同意的安全等级，建立会话密钥，然后利用网站的公钥将会话密钥加密，并传送给网站。<br>[5].    Web服务器利用自己的私钥解密出会话密钥。<br>[6].    Web服务器利用会话密钥加密与客户端之间的通信。</p>
+</li>
+<li><p>https的优点：</p>
+</li>
+</ul>
+<ol>
+<li>使用HTTPS协议可认证用户和服务器，确保数据发送到正确的客户机和服务器。</li>
+<li>HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，要比http协议安全，可防止数据在传输过程中不被窃取、改变，确保数据的完整性。</li>
+<li>HTTPS是现行架构下最安全的解决方案，虽然不是绝对安全，但它大幅增加了中间人攻击的成本。</li>
+<li>谷歌曾在2014年8月份调整搜索引擎算法，并称“比起同等HTTP网站，采用HTTPS加密的网站在搜索结果中的排名将会更高”。</li>
+</ol>
+<ul>
+<li>https的缺点：</li>
+</ul>
+<ol>
+<li>HTTPS协议握手阶段比较费时，会使页面的加载时间延长近50%，增加10%到20%的耗电；</li>
+<li>HTTPS连接缓存不如HTTP高效，会增加数据开销和功耗，甚至已有的安全措施也会因此而受到影响.</li>
+<li>SSL证书需要钱，功能越强大的证书费用越高，个人网站、小网站没有必要一般不会用。</li>
+<li>SSL证书通常需要绑定IP，不能在同一IP上绑定多个域名，IPv4资源不可能支撑这个消耗。</li>
+<li>HTTPS协议的加密范围也比较有限，在黑客攻击、拒绝服务攻击、服务器劫持等方面几乎起不到什么作用。最关键的，SSL证书的信用链体系并不安全，特别是在某些国家可以控制CA根证书的情况下，中间人攻击一样可行。</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://757038689.github.io/2019/04/12/d/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -373,7 +568,7 @@
                 
               
 
-              <time title="Erstellt: 2019-04-12 11:02:43 / Geändert am: 11:03:29" itemprop="dateCreated datePublished" datetime="2019-04-12T11:02:43+08:00">2019-04-12</time>
+              <time title="Post created: 2019-04-12 11:02:43 / Updated at: 11:03:29" itemprop="dateCreated datePublished" datetime="2019-04-12T11:02:43+08:00">2019-04-12</time>
             
 
             
@@ -392,7 +587,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PHP提交方式/" itemprop="url" rel="index"><span itemprop="name">PHP提交方式</span></a></span>
@@ -555,7 +750,7 @@
                 
               
 
-              <time title="Erstellt: 2019-04-12 00:01:43 / Geändert am: 00:12:53" itemprop="dateCreated datePublished" datetime="2019-04-12T00:01:43+08:00">2019-04-12</time>
+              <time title="Post created: 2019-04-12 00:01:43 / Updated at: 00:12:53" itemprop="dateCreated datePublished" datetime="2019-04-12T00:01:43+08:00">2019-04-12</time>
             
 
             
@@ -574,7 +769,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技能总结/" itemprop="url" rel="index"><span itemprop="name">技能总结</span></a></span>
@@ -756,7 +951,7 @@
                 
               
 
-              <time title="Erstellt: 2019-04-08 15:07:57" itemprop="dateCreated datePublished" datetime="2019-04-08T15:07:57+08:00">2019-04-08</time>
+              <time title="Post created: 2019-04-08 15:07:57" itemprop="dateCreated datePublished" datetime="2019-04-08T15:07:57+08:00">2019-04-08</time>
             
 
             
@@ -934,7 +1129,7 @@
                 
               
 
-              <time title="Erstellt: 2019-04-04 13:50:46" itemprop="dateCreated datePublished" datetime="2019-04-04T13:50:46+08:00">2019-04-04</time>
+              <time title="Post created: 2019-04-04 13:50:46" itemprop="dateCreated datePublished" datetime="2019-04-04T13:50:46+08:00">2019-04-04</time>
             
 
             
@@ -1063,7 +1258,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">总数</span>
                   </a>
                 </div>
@@ -1084,7 +1279,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1107,7 +1304,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

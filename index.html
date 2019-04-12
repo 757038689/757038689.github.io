@@ -197,7 +197,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
+    <button aria-label="Navigationsleiste an/ausschalten">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -328,6 +328,188 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://757038689.github.io/2019/04/12/d/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.Yuan">
+      <meta itemprop="description" content="主要展示个人技能的小轩">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G.B.Y'blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/12/d/" class="post-title-link" itemprop="url">PHP关于GET和POST的区别</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于:</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-04-12 11:02:43 / Geändert am: 11:03:29" itemprop="dateCreated datePublished" datetime="2019-04-12T11:02:43+08:00">2019-04-12</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PHP提交方式/" itemprop="url" rel="index"><span itemprop="name">PHP提交方式</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="PHP-常见的提交数据方式有两种为-get和post，它们的区别有以下几种"><a href="#PHP-常见的提交数据方式有两种为-get和post，它们的区别有以下几种" class="headerlink" title="PHP 常见的提交数据方式有两种为:get和post，它们的区别有以下几种:"></a>PHP 常见的提交数据方式有两种为:get和post，它们的区别有以下几种:</h4><ol>
+<li><p>url可见性:<br>get是url可见，而post是可见的。</p>
+</li>
+<li><p>数据传输上:<br>get是通过url地址拼接的方式，而post则是通过body体表单传输</p>
+</li>
+<li><p>缓存性:<br>get是可以缓存的，而post是不可以缓存。</p>
+</li>
+<li><p>页面回退的反应:<br>页面回退上一页get是不受影响的，但是post的话则要重新输入到表单提交。</p>
+</li>
+<li><p>传输数据大小:<br>get是由于url地址长度的限制，但是传输的数据量要小于post，<br>post请求传输数据的大小根据php.ini 配置文件设定，也可以无限大。</p>
+<blockquote>
+<p>   注意的是:http协议并未规定get和post的长度限制。    </p>
+</blockquote>
+</li>
+<li><p>传输的数据类型:<br>get只能传输ASCll字符，而post则可以传输更多类型的数据（整型，字符串，数组等）</p>
+</li>
+<li><p>从功能性的应用场景:<br>get一般用于搜索排序和筛选之类的操作（淘宝，支付宝,几乎所有常见的电商平台的搜索查询都是get提交），目的是资源的获取，读取数据。<br>post则应用修改和写入数据。</p>
+</li>
+<li><p>传输效率上看，post比get要慢一些:<br>其根本原因在于post在提交数据前要把请求头发给服务器进行确认，然后才真正发送数据.<br>post请求的过程:<br>（1）浏览器请求tcp连接（第一次握手）<br>（2）服务器答应进行tcp连接（第二次握手）<br>（3）浏览器确认，并发送post请求头（第三次握手，这个报文比较小，所以http会在此时进行第一次数据发送）<br>（4）服务器返回100 Continue响应<br>（5）浏览器发送数据<br>（6）服务器返回200 OK响应 </p>
+<p>get的请求过程:<br>（1）浏览器请求tcp连接（第一次握手）<br>（2）服务器答应进行tcp连接（第二次握手）<br>（3）浏览器确认，并发送get请求头和数据（第三次握手，这个报文比较小，所以http会在此时进行第一次数据发送）<br>（4）服务器返回200 OK响应<br>从请求过程看，get花费的时间大概为post的2/3左右。</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://757038689.github.io/2019/04/12/c/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -373,7 +555,7 @@
                 
               
 
-              <time title="Created: 2019-04-12 00:01:43 / Modified: 00:12:53" itemprop="dateCreated datePublished" datetime="2019-04-12T00:01:43+08:00">2019-04-12</time>
+              <time title="Erstellt: 2019-04-12 00:01:43 / Geändert am: 00:12:53" itemprop="dateCreated datePublished" datetime="2019-04-12T00:01:43+08:00">2019-04-12</time>
             
 
             
@@ -392,7 +574,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技能总结/" itemprop="url" rel="index"><span itemprop="name">技能总结</span></a></span>
@@ -574,7 +756,7 @@
                 
               
 
-              <time title="Created: 2019-04-08 15:07:57" itemprop="dateCreated datePublished" datetime="2019-04-08T15:07:57+08:00">2019-04-08</time>
+              <time title="Erstellt: 2019-04-08 15:07:57" itemprop="dateCreated datePublished" datetime="2019-04-08T15:07:57+08:00">2019-04-08</time>
             
 
             
@@ -752,7 +934,7 @@
                 
               
 
-              <time title="Created: 2019-04-04 13:50:46" itemprop="dateCreated datePublished" datetime="2019-04-04T13:50:46+08:00">2019-04-04</time>
+              <time title="Erstellt: 2019-04-04 13:50:46" itemprop="dateCreated datePublished" datetime="2019-04-04T13:50:46+08:00">2019-04-04</time>
             
 
             
@@ -881,7 +1063,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">总数</span>
                   </a>
                 </div>
@@ -900,7 +1082,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>

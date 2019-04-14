@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="数据库事务：是指作为单个逻辑工作单元执行的一系列操作，要么完全执行，要么完全的不执行。  它具有以下特性[ACID]:  原子性:是指事务包含的所有操作要么全部成功，要么全部失败回滚。 一致性:是指事务必须使数据库从一个一致的状态一致变成另一个一直的状态，即事务执行前后的状态要保持一致。 隔离性:是指数据库被多个用户并发访问时，  比如同时操作一张表，数据库为每一个用户开启的事务，不能被其他事务所">
+  <meta name="description" content="数据库事务：是指作为单个逻辑工作单元执行的一系列操作，要么完全执行，要么完全的不执行。  它具有以下特性[ACID]:  原子性:是指事务包含的所有操作要么全部成功，要么全部失败回滚。 一致性:是指事务必须使数据库从一个一致的状态一致变成另一个一致的状态，即事务执行前后的状态要保持一致。 隔离性:是指数据库被多个用户并发访问时，  比如同时操作一张表，数据库为每一个用户开启的事务，不能被其他事务所">
 <meta name="keywords" content="MYSQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MYSQL的事务处理">
 <meta property="og:url" content="https://757038689.github.io/2019/04/14/h/index.html">
 <meta property="og:site_name" content="梦逍遥">
-<meta property="og:description" content="数据库事务：是指作为单个逻辑工作单元执行的一系列操作，要么完全执行，要么完全的不执行。  它具有以下特性[ACID]:  原子性:是指事务包含的所有操作要么全部成功，要么全部失败回滚。 一致性:是指事务必须使数据库从一个一致的状态一致变成另一个一直的状态，即事务执行前后的状态要保持一致。 隔离性:是指数据库被多个用户并发访问时，  比如同时操作一张表，数据库为每一个用户开启的事务，不能被其他事务所">
+<meta property="og:description" content="数据库事务：是指作为单个逻辑工作单元执行的一系列操作，要么完全执行，要么完全的不执行。  它具有以下特性[ACID]:  原子性:是指事务包含的所有操作要么全部成功，要么全部失败回滚。 一致性:是指事务必须使数据库从一个一致的状态一致变成另一个一致的状态，即事务执行前后的状态要保持一致。 隔离性:是指数据库被多个用户并发访问时，  比如同时操作一张表，数据库为每一个用户开启的事务，不能被其他事务所">
 <meta property="og:locale" content="Chinese[中文]">
-<meta property="og:updated_time" content="2019-04-14T08:05:35.367Z">
+<meta property="og:updated_time" content="2019-04-14T08:10:20.551Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MYSQL的事务处理">
-<meta name="twitter:description" content="数据库事务：是指作为单个逻辑工作单元执行的一系列操作，要么完全执行，要么完全的不执行。  它具有以下特性[ACID]:  原子性:是指事务包含的所有操作要么全部成功，要么全部失败回滚。 一致性:是指事务必须使数据库从一个一致的状态一致变成另一个一直的状态，即事务执行前后的状态要保持一致。 隔离性:是指数据库被多个用户并发访问时，  比如同时操作一张表，数据库为每一个用户开启的事务，不能被其他事务所">
+<meta name="twitter:description" content="数据库事务：是指作为单个逻辑工作单元执行的一系列操作，要么完全执行，要么完全的不执行。  它具有以下特性[ACID]:  原子性:是指事务包含的所有操作要么全部成功，要么全部失败回滚。 一致性:是指事务必须使数据库从一个一致的状态一致变成另一个一致的状态，即事务执行前后的状态要保持一致。 隔离性:是指数据库被多个用户并发访问时，  比如同时操作一张表，数据库为每一个用户开启的事务，不能被其他事务所">
 
 
 
@@ -197,7 +197,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Navigationsleiste an/ausschalten">
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -371,7 +371,7 @@
                 
               
 
-              <time title="Erstellt: 2019-04-14 16:04:00 / Geändert am: 16:05:35" itemprop="dateCreated datePublished" datetime="2019-04-14T16:04:00+08:00">2019-04-14</time>
+              <time title="Post created: 2019-04-14 16:04:00 / Updated at: 16:10:20" itemprop="dateCreated datePublished" datetime="2019-04-14T16:04:00+08:00">2019-04-14</time>
             
 
             
@@ -390,7 +390,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/事务处理/" itemprop="url" rel="index"><span itemprop="name">事务处理</span></a></span>
@@ -431,7 +431,7 @@
         <h4 id="数据库事务：是指作为单个逻辑工作单元执行的一系列操作，要么完全执行，要么完全的不执行。"><a href="#数据库事务：是指作为单个逻辑工作单元执行的一系列操作，要么完全执行，要么完全的不执行。" class="headerlink" title="数据库事务：是指作为单个逻辑工作单元执行的一系列操作，要么完全执行，要么完全的不执行。"></a>数据库事务：是指作为单个逻辑工作单元执行的一系列操作，要么完全执行，要么完全的不执行。</h4><p>  它具有以下特性[ACID]:</p>
 <ol>
 <li>原子性:是指事务包含的所有操作要么全部成功，要么全部失败回滚。</li>
-<li>一致性:是指事务必须使数据库从一个一致的状态一致变成另一个一直的状态，即事务执行前后的状态要保持一致。</li>
+<li>一致性:是指事务必须使数据库从一个一致的状态一致变成另一个一致的状态，即事务执行前后的状态要保持一致。</li>
 <li>隔离性:是指数据库被多个用户并发访问时，  比如同时操作一张表，数据库为每一个用户开启的事务，不能被其他事务所影响，多个并发事务之间隔离。</li>
 <li>持久性:是指一个事务一旦被提交了，那么对于数据库中的数据改变就是永久性的，即便是在数据库系统遭遇到故障的情况下也不会丢失提交事务的操作。</li>
 </ol>

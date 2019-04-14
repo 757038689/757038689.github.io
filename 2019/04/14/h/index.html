@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="见字释义:HTTP:超文本传输协议，是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从WWW服务器传输超文本到本地浏览器的传输协议，它可以使浏览器更加高效，使网络传输减少。HTTPS:是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。  HTTPS协议的主要作">
-<meta name="keywords" content="协议">
+  <meta name="description" content="数据库事务：是指作为单个逻辑工作单元执行的一系列操作，要么完全执行，要么完全的不执行。  它具有以下特性[ACID]:  原子性:是指事务包含的所有操作要么全部成功，要么全部失败回滚。 一致性:是指事务必须使数据库从一个一致的状态一致变成另一个一直的状态，即事务执行前后的状态要保持一致。 隔离性:是指数据库被多个用户并发访问时，  比如同时操作一张表，数据库为每一个用户开启的事务，不能被其他事务所">
+<meta name="keywords" content="MYSQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于http与https的区别">
-<meta property="og:url" content="https://757038689.github.io/2019/04/12/e/index.html">
+<meta property="og:title" content="MYSQL的事务处理">
+<meta property="og:url" content="https://757038689.github.io/2019/04/14/h/index.html">
 <meta property="og:site_name" content="梦逍遥">
-<meta property="og:description" content="见字释义:HTTP:超文本传输协议，是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从WWW服务器传输超文本到本地浏览器的传输协议，它可以使浏览器更加高效，使网络传输减少。HTTPS:是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。  HTTPS协议的主要作">
+<meta property="og:description" content="数据库事务：是指作为单个逻辑工作单元执行的一系列操作，要么完全执行，要么完全的不执行。  它具有以下特性[ACID]:  原子性:是指事务包含的所有操作要么全部成功，要么全部失败回滚。 一致性:是指事务必须使数据库从一个一致的状态一致变成另一个一直的状态，即事务执行前后的状态要保持一致。 隔离性:是指数据库被多个用户并发访问时，  比如同时操作一张表，数据库为每一个用户开启的事务，不能被其他事务所">
 <meta property="og:locale" content="Chinese[中文]">
-<meta property="og:updated_time" content="2019-04-12T03:26:28.649Z">
+<meta property="og:updated_time" content="2019-04-14T08:05:35.367Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于http与https的区别">
-<meta name="twitter:description" content="见字释义:HTTP:超文本传输协议，是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从WWW服务器传输超文本到本地浏览器的传输协议，它可以使浏览器更加高效，使网络传输减少。HTTPS:是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。  HTTPS协议的主要作">
+<meta name="twitter:title" content="MYSQL的事务处理">
+<meta name="twitter:description" content="数据库事务：是指作为单个逻辑工作单元执行的一系列操作，要么完全执行，要么完全的不执行。  它具有以下特性[ACID]:  原子性:是指事务包含的所有操作要么全部成功，要么全部失败回滚。 一致性:是指事务必须使数据库从一个一致的状态一致变成另一个一直的状态，即事务执行前后的状态要保持一致。 隔离性:是指数据库被多个用户并发访问时，  比如同时操作一张表，数据库为每一个用户开启的事务，不能被其他事务所">
 
 
 
@@ -115,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="https://757038689.github.io/2019/04/12/e/">
+  <link rel="canonical" href="https://757038689.github.io/2019/04/14/h/">
 
 
 
@@ -125,7 +125,7 @@
   };
 </script>
 
-  <title>关于http与https的区别 | 梦逍遥</title>
+  <title>MYSQL的事务处理 | 梦逍遥</title>
   
 
 
@@ -328,7 +328,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://757038689.github.io/2019/04/12/e/">
+    <link itemprop="mainEntityOfPage" href="https://757038689.github.io/2019/04/14/h/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Yuan">
@@ -345,7 +345,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">关于http与https的区别
+          <h1 class="post-title" itemprop="name headline">MYSQL的事务处理
 
               
             
@@ -371,7 +371,7 @@
                 
               
 
-              <time title="Erstellt: 2019-04-12 11:24:53 / Geändert am: 11:26:28" itemprop="dateCreated datePublished" datetime="2019-04-12T11:24:53+08:00">2019-04-12</time>
+              <time title="Erstellt: 2019-04-14 16:04:00 / Geändert am: 16:05:35" itemprop="dateCreated datePublished" datetime="2019-04-14T16:04:00+08:00">2019-04-14</time>
             
 
             
@@ -393,7 +393,7 @@
                 <span class="post-meta-item-text">in</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/传输协议/" itemprop="url" rel="index"><span itemprop="name">传输协议</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/事务处理/" itemprop="url" rel="index"><span itemprop="name">事务处理</span></a></span>
 
                 
                 
@@ -428,44 +428,30 @@
       
 
       
-        <ul>
-<li><p>见字释义:<br>HTTP:超文本传输协议，是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从WWW服务器传输超文本到本地浏览器的传输协议，它可以使浏览器更加高效，使网络传输减少。<br>HTTPS:是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。</p>
-<blockquote>
-<pre><code>HTTPS协议的主要作用可以分为两种：一种是建立一个信息安全通道，来保证数据传输的安全；另一种就是确认网站的真实性。
-</code></pre></blockquote>
-</li>
-<li><p>HTTP与HTTPS的区别:</p>
-</li>
-</ul>
+        <h4 id="数据库事务：是指作为单个逻辑工作单元执行的一系列操作，要么完全执行，要么完全的不执行。"><a href="#数据库事务：是指作为单个逻辑工作单元执行的一系列操作，要么完全执行，要么完全的不执行。" class="headerlink" title="数据库事务：是指作为单个逻辑工作单元执行的一系列操作，要么完全执行，要么完全的不执行。"></a>数据库事务：是指作为单个逻辑工作单元执行的一系列操作，要么完全执行，要么完全的不执行。</h4><p>  它具有以下特性[ACID]:</p>
 <ol>
-<li><p>安全性:<br>http的连接很简单，是无状态的,都是未加密状态的明文；HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。</p>
+<li>原子性:是指事务包含的所有操作要么全部成功，要么全部失败回滚。</li>
+<li>一致性:是指事务必须使数据库从一个一致的状态一致变成另一个一直的状态，即事务执行前后的状态要保持一致。</li>
+<li>隔离性:是指数据库被多个用户并发访问时，  比如同时操作一张表，数据库为每一个用户开启的事务，不能被其他事务所影响，多个并发事务之间隔离。</li>
+<li>持久性:是指一个事务一旦被提交了，那么对于数据库中的数据改变就是永久性的，即便是在数据库系统遭遇到故障的情况下也不会丢失提交事务的操作。</li>
+</ol>
+<h4 id="如果没有隔离，会发生的几种问题"><a href="#如果没有隔离，会发生的几种问题" class="headerlink" title="如果没有隔离，会发生的几种问题:"></a>如果没有隔离，会发生的几种问题:</h4><ol>
+<li>脏读：一个事务处理过程中读取了另一个未提交事务中的数据。</li>
+<li>不可重复读:对于数据库中的某个数据，一个事务范围内多次查询却返回了不同的数据值，这是由于在查询的隔离期间，另一个事务修改并提交数据。</li>
+<li>幻读:一个事务中读取到了别的事务插入的数据，从而导致前后不一致。</li>
+</ol>
+<h4 id="mysql中的锁机制"><a href="#mysql中的锁机制" class="headerlink" title="mysql中的锁机制"></a>mysql中的锁机制</h4><ol>
+<li><p>一次封锁<br>因为有大量的并发访问，为了预防死锁，一般应用中采用的是一次封锁的方案：就是在方法的开始阶段，已经预先知道需要用到那些数据，然后全部锁住，在方法执行之后，再全部解锁。<br>这种方案可以有效避免死锁发生。</p>
 </li>
-<li><p>是否收费:<br>http 不收费，https协议需要到ca申请证书，一般免费证书较少，因而需要一定费用。</p>
-</li>
-<li><p>使用的端口不一样:<br>http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。    </p>
+<li><p>两段锁:加锁阶段和解锁阶段<br>加锁:读数据前需要申请获取S锁（共享锁：其他事务可以继续加共享锁，但不能加排他锁）；写数据前需要申请获取X锁（排他锁：其他事务不能获取任何锁）。加锁不成功，则事务进入等待状态，直到加锁成功才继续执行。<br>解锁:当事务释放了一个封锁以后，事务进入解锁阶段，在该阶段只能进行解锁操作不能进行加锁操作。</p>
 </li>
 </ol>
-<ul>
-<li><p>https的加密原理:<br>[1].    客户使用https的URL访问Web服务器，要求与Web服务器建立SSL连接。<br>[2].    Web服务器收到客户端请求后，会将网站的证书信息（证书中包含公钥）传送一份给客户端。<br>[3].    客户端的浏览器与Web服务器开始协商SSL连接的安全等级，也就是信息加密的等级。<br>[4].    客户端的浏览器根据双方同意的安全等级，建立会话密钥，然后利用网站的公钥将会话密钥加密，并传送给网站。<br>[5].    Web服务器利用自己的私钥解密出会话密钥。<br>[6].    Web服务器利用会话密钥加密与客户端之间的通信。</p>
-</li>
-<li><p>https的优点：</p>
-</li>
-</ul>
-<ol>
-<li>使用HTTPS协议可认证用户和服务器，确保数据发送到正确的客户机和服务器。</li>
-<li>HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，要比http协议安全，可防止数据在传输过程中不被窃取、改变，确保数据的完整性。</li>
-<li>HTTPS是现行架构下最安全的解决方案，虽然不是绝对安全，但它大幅增加了中间人攻击的成本。</li>
-<li>谷歌曾在2014年8月份调整搜索引擎算法，并称“比起同等HTTP网站，采用HTTPS加密的网站在搜索结果中的排名将会更高”。</li>
-</ol>
-<ul>
-<li>https的缺点：</li>
-</ul>
-<ol>
-<li>HTTPS协议握手阶段比较费时，会使页面的加载时间延长近50%，增加10%到20%的耗电；</li>
-<li>HTTPS连接缓存不如HTTP高效，会增加数据开销和功耗，甚至已有的安全措施也会因此而受到影响.</li>
-<li>SSL证书需要钱，功能越强大的证书费用越高，个人网站、小网站没有必要一般不会用。</li>
-<li>SSL证书通常需要绑定IP，不能在同一IP上绑定多个域名，IPv4资源不可能支撑这个消耗。</li>
-<li>HTTPS协议的加密范围也比较有限，在黑客攻击、拒绝服务攻击、服务器劫持等方面几乎起不到什么作用。最关键的，SSL证书的信用链体系并不安全，特别是在某些国家可以控制CA根证书的情况下，中间人攻击一样可行。</li>
+<h4 id="mysql的锁类型"><a href="#mysql的锁类型" class="headerlink" title="mysql的锁类型"></a>mysql的锁类型</h4><ol>
+<li>表锁：对一整张表加锁，并发能力低下（即使有分读锁、写锁），一般在DDL处理时使用。</li>
+<li>行锁：只锁住特定行的数据，并发能力强，MySQL一般都是用行锁来处理并发事务。</li>
+<li>CAP锁（间隙锁）：是MySQL使用索引对行锁两边的区间进行加锁，避免其他事务在这两个区间insert的一种锁。</li>
+<li>NEXT-KEY锁:NEXT-KEY锁是行锁和GAP锁的合并（MySQL使用它来避免幻读）。</li>
+<li>MVCC是innodb的乐观锁，可以提高mysql的读取操作性能，并解决mysql重复读的问题。</li>
 </ol>
 
       
@@ -490,7 +476,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/协议/" rel="tag"># 协议</a>
+            <a href="/tags/MYSQL/" rel="tag"># MYSQL</a>
           
         </div>
       
@@ -503,8 +489,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/12/d/" rel="next" title="PHP关于GET和POST的区别">
-                <i class="fa fa-chevron-left"></i> PHP关于GET和POST的区别
+              <a href="/2019/04/12/f/" rel="next" title="HTTP常见状态码整理">
+                <i class="fa fa-chevron-left"></i> HTTP常见状态码整理
               </a>
             
           </div>
@@ -512,10 +498,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/12/f/" rel="prev" title="HTTP常见状态码整理">
-                HTTP常见状态码整理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -559,8 +541,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            内容
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            个人中心
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -658,6 +649,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据库事务：是指作为单个逻辑工作单元执行的一系列操作，要么完全执行，要么完全的不执行。"><span class="nav-number">1.</span> <span class="nav-text">数据库事务：是指作为单个逻辑工作单元执行的一系列操作，要么完全执行，要么完全的不执行。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如果没有隔离，会发生的几种问题"><span class="nav-number">2.</span> <span class="nav-text">如果没有隔离，会发生的几种问题:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mysql中的锁机制"><span class="nav-number">3.</span> <span class="nav-text">mysql中的锁机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mysql的锁类型"><span class="nav-number">4.</span> <span class="nav-text">mysql的锁类型</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

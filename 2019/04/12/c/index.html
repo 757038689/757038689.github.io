@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="梦逍遥">
 <meta property="og:description" content="关于redis与memached的区别 简单的区别有以下几点:   Redis不仅仅支持简单的k/v类型的数据，同时还提供list，set，zset，hash等数据结构的存储. Redis支持数据的备份，即master-slave模式的数据备份. Redis支持数据的持久化，可以将内存中的数据保持在磁盘中，重启的时候可以再次加载进行使用.   本质区别:  在Redis中，并不是所有的数据都一直存">
 <meta property="og:locale" content="Chinese[中文]">
-<meta property="og:updated_time" content="2019-04-16T05:31:26.992Z">
+<meta property="og:updated_time" content="2019-04-16T10:22:04.933Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PHP面试遇到的问题整理一">
 <meta name="twitter:description" content="关于redis与memached的区别 简单的区别有以下几点:   Redis不仅仅支持简单的k/v类型的数据，同时还提供list，set，zset，hash等数据结构的存储. Redis支持数据的备份，即master-slave模式的数据备份. Redis支持数据的持久化，可以将内存中的数据保持在磁盘中，重启的时候可以再次加载进行使用.   本质区别:  在Redis中，并不是所有的数据都一直存">
@@ -388,7 +388,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-04-16 13:31:26" itemprop="dateModified" datetime="2019-04-16T13:31:26+08:00">2019-04-16</time>
+                <time title="Geändert am: 2019-04-16 18:22:04" itemprop="dateModified" datetime="2019-04-16T18:22:04+08:00">2019-04-16</time>
               
             
           </span>
@@ -480,7 +480,17 @@
 <li>当存储的数据不能被剔除时，使用Redis更合适。</li>
 </ol>
 <h4 id="关于json和jsonp的区别和使用"><a href="#关于json和jsonp的区别和使用" class="headerlink" title="关于json和jsonp的区别和使用:"></a>关于json和jsonp的区别和使用:</h4><pre><code>JSON是一种基于文本的数据交换方式（不支持跨域），而JSONP是一种非官方跨域数据交互协议。
-json不可以跨域，但是js可以跨域，所以可以通过封装js方法传输json数据，然后dataType=&apos;jsonp&apos;即可.
+json不可以跨域，但是js可以跨域，所以可以通过封装js方法传输json数据，然后dataType=&apos;jsonp&apos;即可。
+JSON是&quot;暗号&quot;，而JSONP则是接头方式。一个是描述信息的格式，一个是信息传递双方约定的方法。
+
+1.json的优点:
+[1]基于纯文本，跨平台传递极其简单。
+[2]Javascript原生支持，后台语言几乎全部支持。
+[3]轻量级数据格式，占用字符数量极少，特别适合互联网传递。
+[4]可读性较强，虽然比不上XML那么一目了然，但在合理的依次缩进之后还是很容易识别的。
+[5]容易编写和解析，当然前提是你要知道数据结构。
+
+
 
 参考文章链接:https://www.cnblogs.com/JimBo-Wang/p/6552652.html
 </code></pre>

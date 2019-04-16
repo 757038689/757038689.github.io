@@ -1298,12 +1298,24 @@
                 
               
 
-              <time title="Erstellt: 2019-04-12 00:01:43 / Geändert am: 00:12:53" itemprop="dateCreated datePublished" datetime="2019-04-12T00:01:43+08:00">2019-04-12</time>
+              <time title="Erstellt: 2019-04-12 00:01:43" itemprop="dateCreated datePublished" datetime="2019-04-12T00:01:43+08:00">2019-04-12</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-04-16 13:31:26" itemprop="dateModified" datetime="2019-04-16T13:31:26+08:00">2019-04-16</time>
               
             
           </span>
@@ -1394,11 +1406,13 @@
 <li>Redis使用最佳方式是全部数据in-memory。</li>
 <li>Redis更多场景是作为Memcached的替代者来使用。</li>
 <li>/value之外的更多数据类型支持时，使用Redis更合适。</li>
-<li><p>当存储的数据不能被剔除时，使用Redis更合适。</p>
-<p>参考文章链接:<a href="https://www.cnblogs.com/JimBo-Wang/p/6552652.html" target="_blank" rel="noopener">https://www.cnblogs.com/JimBo-Wang/p/6552652.html</a></p>
-</li>
+<li>当存储的数据不能被剔除时，使用Redis更合适。</li>
 </ol>
+<h4 id="关于json和jsonp的区别和使用"><a href="#关于json和jsonp的区别和使用" class="headerlink" title="关于json和jsonp的区别和使用:"></a>关于json和jsonp的区别和使用:</h4><pre><code>JSON是一种基于文本的数据交换方式（不支持跨域），而JSONP是一种非官方跨域数据交互协议。
+json不可以跨域，但是js可以跨域，所以可以通过封装js方法传输json数据，然后dataType=&apos;jsonp&apos;即可.
 
+参考文章链接:https://www.cnblogs.com/JimBo-Wang/p/6552652.html
+</code></pre>
           
         
       

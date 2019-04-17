@@ -328,6 +328,210 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://757038689.github.io/2019/04/17/i/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.Yuan">
+      <meta itemprop="description" content="秀起我的小肌肉">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="梦逍遥">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/17/i/" class="post-title-link" itemprop="url">开源框架CI，TP5，symfony的优缺点</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于:</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-04-17 15:37:44" itemprop="dateCreated datePublished" datetime="2019-04-17T15:37:44+08:00">2019-04-17</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/框架/" itemprop="url" rel="index"><span itemprop="name">框架</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="CodeIgnite框架的优-缺点"><a href="#CodeIgnite框架的优-缺点" class="headerlink" title="CodeIgnite框架的优/缺点:"></a>CodeIgnite框架的优/缺点:</h4><ul>
+<li>优点:</li>
+</ul>
+<ol>
+<li>配置简单，全部配置都用PHP脚本进行配置,执行效率高，具有基本的路由功能，能够进行一定程度的路由，具有初步的layout功能，能够制作一定程度的界面外观。</li>
+<li>快速简洁，代码不多，执行性能高，PHP框架简单，容易上手，学习成本低，文档详细，自带很多简单好用的library，框架适合小型应用。    </li>
+</ol>
+<ul>
+<li>缺点：</li>
+</ul>
+<ol>
+<li>把Model层简单的理解为数据库操作。</li>
+<li>PHP框架略显简单，只能够满足小型应用，略微不太能够满足中型应用需要。</li>
+</ol>
+<h4 id="TP5框架"><a href="#TP5框架" class="headerlink" title="TP5框架"></a>TP5框架</h4><ul>
+<li>优点:</li>
+</ul>
+<ol>
+<li>ThinkPHP是一个轻量级的中型框架,是从Java的Struts结构移植过来的中文PHP开发框架。</li>
+<li>易于上手，有丰富的中文文档；学习成本低，社区活跃度高。</li>
+<li>框架的兼容性较强，PHP4和PHP5完全兼容、完全支持UTF8等。</li>
+<li>适合用于中小项目的开发。</li>
+<li>从3.22版本开始引入composer包管理工具。</li>
+</ol>
+<ul>
+<li>缺点:</li>
+</ul>
+<ol>
+<li>目录结构混乱，相比其他框架目录结构要差一点。</li>
+<li>对Ajax的支持不是很好。</li>
+<li>上手容易，但是深入学习较难。</li>
+</ol>
+<h4 id="symfony框架的优缺点"><a href="#symfony框架的优缺点" class="headerlink" title="symfony框架的优缺点:"></a>symfony框架的优缺点:</h4><ul>
+<li>优点:</li>
+</ul>
+<ol>
+<li>它是面对大型的，复杂的项目框架，方便多人协助，方便代码复用。</li>
+<li>完整实现MVC三层，封装了所有东西，包括 $_POST，$_GET 数据，异常处理，调试功能，数据检测；包含强大的缓存功能，自动加载Class（这个功能很爽），强大的i18n国家化支持；具有很强大的view层操作，能够零碎的包含单个多个文件；非常强大的配置功能，使用yml配置能够控制所有框架和程序运行行为，强大到让人无语；能够很随意的定义各种自己的class，并且symfony能够自动加载（auto load）这些class，能够在程序中随意调用；包含强大的多层级项目和应用管理：Project –&gt; Application –&gt; Module –&gt; Action，能够满足一个项目下多个应用的需要，并且每层可以定义自己的类库，配置文件，layout；非常强大的命令行操作功能，包括建立项目、建立应用、建立模块、刷新缓存等等。</li>
+</ol>
+<ul>
+<li>缺点:</li>
+</ul>
+<ol>
+<li>效率不是很高，主要表现在解析模板和读取配置文件的过程，花费时间不少。</li>
+<li><p>学习成本很高，并且国内没有成熟的社区和文档，连中文手册都没有，相应的要掌握所有功能，需要花费比较多的时间。</p>
+<p>注意仅供参考！！！</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://757038689.github.io/2019/04/16/e-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2019,7 +2223,7 @@ JSON是&quot;暗号&quot;，而JSONP则是接头方式。一个是描述信息�
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">总数</span>
                   </a>
                 </div>
@@ -2050,7 +2254,9 @@ JSON是&quot;暗号&quot;，而JSONP则是接头方式。一个是描述信息�
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -2083,7 +2289,9 @@ JSON是&quot;暗号&quot;，而JSONP则是接头方式。一个是描述信息�
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

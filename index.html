@@ -328,6 +328,337 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://757038689.github.io/2019/04/24/k/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.Yuan">
+      <meta itemprop="description" content="秀起我的小肌肉">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="梦逍遥">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/24/k/" class="post-title-link" itemprop="url">PHP基础知识点</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于:</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-04-24 22:49:21" itemprop="dateCreated datePublished" datetime="2019-04-24T22:49:21+08:00">2019-04-24</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/新起点/" itemprop="url" rel="index"><span itemprop="name">新起点</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <pre><code>PHP中最基本的数据存储单元是变量和常量。
+</code></pre><h4 id="1-认识变量"><a href="#1-认识变量" class="headerlink" title="1.认识变量:"></a>1.认识变量:</h4><pre><code>1.1 定义:以$开头，变量名一定不要以数字开头，中间不可以使用空格，不能使用点分开，由字母,下划线组成.
+1.2 类型:整型，浮点型，字符串，布尔型，对象，数组，资源类型， null。
+注意项：
+布尔型为false的情况:
+[1]布尔型false。
+[2]整数值0（零）为假，-1和其他非零值（不论正负）一样，认为是true。
+[3]浮点型值0.0。
+[4]空白字符和字符串&apos;0&apos;。
+[5]没有成员变量的数组。
+[6]没有单元的对象(仅适用PHP4)。
+[7]特殊类型NULL（包括尚未设定的变量）。
+
+浮点型：最好不参与判断，两个浮点数是否相等。
+
+字符串: 可以使用单引号，双引号，定界符定义。
+注意点: 单引号不会解析变量，双引号和定界符都可以解析变量。从效率看单引号是最高的，因为它不用解析变量。
+
+数组:是PHP一种重要的数据类型。
+
+对象:是PHP一种复合数据类型，但它是一种更高级的数据类型。
+
+资源类型:资源是一种特殊的变量，保存到外部资源的一个引用，资源是通过专门的函数来建立和使用的。比如链接数据库资源。
+
+null:表示一个变量没有值，将变量直接赋值为null，声明变量尚未赋值，被unset()函数销毁的变量。
+
+1.3 数据转换:
+[1]自动转换，一般参与运算时会自动转换。
+[2]强制转换, 通过转换函数intval() floatval(),strval()等。
+
+1.4 变量类型的测试函数
+比如:is_bool(), is_int(), is_long(), is_float(), is_double(),is_real(),is_string(),is_array(),is_object(),is_resource(),is_null()
+
+常量:
+define(&apos;名称&apos;,值)  名称一般用大写。
+注意: 如果使用一个没有声明的常量，则常量名称会被解析为一个普通字符串，但会比直接使用字符串慢近8倍，所以在声明字符串时一定要加上单引号或双引号。
+[1]常量前面没有美元符号($)
+[2]常量只能用define()函数定义，而不能通过赋值语句。
+[3]常量可以不用理会变量分范围的规则而在任何地方定义和访问。
+[4]常量一旦定义就不能重新被定义或者取消定义，直到脚本运行结束自动释放。
+[5]常量的值只能是标量Boolean，int, float, string。
+
+魔术变量:
+__FILE__     当前的文件名
+__LINE__     当前的行数
+__FUNCTION__ 当前的函数名称
+__CLASS__    当前的类名
+__METHOD__   当前对象的方法
+
+
+运算符特别注意:@错误控制运算符，可能产生的任何错误都被忽略。
+
+变量根据范围区分：局部变量和全局变量,【内：静态变量】。
+局部变量一般在方法内部使用，不能在外部使用，而全局可以通过global声明，实现内外使用。
+static关键字定义。它不会自动释放，在第一次初始化后，一直保存在内存中。
+</code></pre><h4 id="2-PHP的流程控制结构"><a href="#2-PHP的流程控制结构" class="headerlink" title="2.PHP的流程控制结构"></a>2.PHP的流程控制结构</h4><pre><code>1.单一条件分支结构 if
+2.双向条件分支结构 if..else..
+3.多向条件分支结构 if..elseif..else..
+4.巢状条件分支结构 switch ..case...break.. /if( if..else..)elseif()...else...
+
+特殊流程语句:
+break :可以结束当前for，foreach，while，do-while和switch的结构执行。
+continue：只能使用在循环语句内部，功能是跳过该次循环，继续执行下次循环。
+exit(),die()函数，直接退出当前脚本。
+</code></pre><blockquote>
+<p>   echo,print()是语言结构，print_r()是函数，从效率上看 echo &gt; print() &gt; print_r()<br>    printf()输出格式化的字符串。</p>
+</blockquote>
+<h4 id="3-PHP函数应用"><a href="#3-PHP函数应用" class="headerlink" title="3.PHP函数应用"></a>3.PHP函数应用</h4><pre><code>定义:一个被命名的，独立的代码段。
+特点:被命名的，独立的，执行特定任务的，可以将一个返回值给调用它的程序。
+优点：重用性，可维护性，开发效率，可靠性，复杂性。
+
+特别注意回调函数:指调用函数时并不是传递一个标准的变量作为参数，而是将另一个函数作为参数传递到调用的函数中。
+比如:
+function demo(&apos;one&apos;){
+    $fun($i);
+}
+
+function one($a){
+    $a++;
+}
+
+可以使用PHP内置函数实现回调:call_user_func_array();
+递归函数，就是在函数内部调用自己.
+
+注意：
+require()和include()不是函数，跟echo()都是语言结构。
+require_once()和include_once()，如果该文件中的代码已经包含了，则不会再次包含。
+</code></pre><h4 id="4-PHP的数组和数据结构"><a href="#4-PHP的数组和数据结构" class="headerlink" title="4.PHP的数组和数据结构"></a>4.PHP的数组和数据结构</h4><pre><code>分类:索引数组和关联数组。
+遍历数组:for,foreach()，或者联合each(),list(),while()遍历数组
+each()返回键/值对，指针并向后移动下一个元素位置，当没有返回false。
+</code></pre><h4 id="5-PHP面向对象"><a href="#5-PHP面向对象" class="headerlink" title="5.PHP面向对象"></a>5.PHP面向对象</h4><pre><code>5.1 面向对象的单位就是对象。
+5.2 内存分配:栈空间段，堆空间段，数据段，代码段
+认识构造方法和析构方法:
+__construct() 每次使用new关键字来实例化对象时都会自动调用构造方法，不能主动通过对象的引用调用构造方法，构造方法一般执行一些有效的初始化任务，比如赋予属性初始值。
+__destruct() 对象被销毁前自动调用的方法，当对象不能被访问就会自动启动垃圾回收的程序，收回对象在堆栈中占用的内存空间。
+</code></pre><blockquote>
+<p>  注意点:栈内存：先进后出。</p>
+</blockquote>
+<ul>
+<li><p>面向对象三大特性:封装性，继承性，多态性。<br>5.3 封装性:原则就是要求对象以外的部分不能随意存取对象内部数据(成员属性和成员方法)，从而有效地避免了外部错误对它的”交叉感染”，使软件错误能够局部化，大大减小差错和排错的难度。<br>1.对象中的成员属性一旦被pravite关键字封装成私有之后，就只能在对象内部的成员方法中使用，不能被对象外部直接赋值，也不能在对象外部直接获取成员属性。但可以通过关键字public</p>
+<blockquote>
+<p>   注意:可以通过<strong>set()和</strong>get()给私有属性设置值和获取私有属性。</p>
+</blockquote>
+</li>
+<li><p>魔术方法:<br><strong>get(),</strong>set(),<strong>isset(),</strong>unset()</p>
+<p>5.4 继承性：一个类只能直接从另一个类中继承数据，一个类可以有多个子类。关键字:extends<br>访问类型控制:<br>private,protected,public<br>private:只能在类中访问，子类和外部成员都没权访问.<br>protected:类中和子类都可以访问，外部成员不能访问.<br>public：类中，子类，外部成员都可以访问.</p>
+<p>5.5 子类重载父类<br>1.父类方法不能重载，但是子类可以定义和父类同名的方法。<br>2.子类重载可以调用父类中被它覆盖的方法，调用格式:parent::方法名()。</p>
+</li>
+<li><p>常见关键字和魔术方法<br>final, static, const，instanceof 等关键字<br><strong>call(), </strong>toString(), <strong>autoload(), </strong>sleep(), __wakeup()</p>
+<p>final关键字:</p>
+<blockquote>
+<p>   1.使用final标识的类，不能被继承。<br>2.在类中使用final标识的成员方法，在子类中不能被覆盖。</p>
+</blockquote>
+<p>static关键字:可以标识成员属性，也可以标识成员方法。<br>1.static标识的成员是属于类的，与对象实例和其他的类无关。<br>2.不能用$this来引用。<br>格式1: 类名::静态成员属性名, 类名::静态成员方法名()<br>格式2: self::静态成员属性，  self::静态成员方法()</p>
+<p>const关键字:将类中的成员属性定义为常量。self访问,不能加$符号。</p>
+<p>instanceof 关键字可以确定一个对象是类的实例，类的子类，还是实现了某个特定接口。</p>
+<p>3.魔术方法<br><strong>toString()快速获取对象的字符串表示的最便捷的方式。
+</strong>call() 调用对象中不存在的方法时就会自动调用该方法,使程序可以继续往下执行。<br>__autoload()自动加载函数</p>
+<p>4.对象串行化:<br>serialize(), 反串行化 unserialize()函数</p>
+<p>5.6 设计模式<br>1.单态模式:保证在面向对象编程设计中，一个类只能有一个实例对象存在。<br>使用场景:链接数据库，创建目录等。<br>2.工厂模式:<br>3.抽象工厂:</p>
+<p>5.7 抽象类和接口<br>抽象类是一种特殊的类，接口也是一种特殊的抽象类。用abstract修饰.<br>抽象方法就是没有方法体的方法。<br>abstract function fun1();</p>
+<p>继承接口关键字:implements</p>
+<blockquote>
+<p>   PHP是单继承的，一个类只能有一个父类，但是一个类可以实现多个接口。</p>
+</blockquote>
+<p>5.7 多态性:方法的重写。<br>重写要求子类的方法和父类的方法名称相同。</p>
+</li>
+</ul>
+<h4 id="6-PHP的错误和异常处理"><a href="#6-PHP的错误和异常处理" class="headerlink" title="6 PHP的错误和异常处理"></a>6 PHP的错误和异常处理</h4><pre><code>1.错误类型:语法错误,运行时错误,逻辑错误。
+2.常见错误报告级别:
+    E_ERROR 致命错误
+    E_WARNING 运行时警告(非致命的错误)
+    E_PARSE 从语法中解析错误
+
+如果要报告错误消息,可以通过php.ini文件设置display_errors为on，或者在php脚本上面调用ini_set()函数。
+error_reporting(0)  完全关闭错误报告。
+error_reporting(E_ALL)  报告每个错误。
+</code></pre><h4 id="7-PHP的日期和时间"><a href="#7-PHP的日期和时间" class="headerlink" title="7 PHP的日期和时间"></a>7 PHP的日期和时间</h4><pre><code>7.1 mktime(int hour, int minute, int second, int month, int day, int year);该函数对于日期运算和验证非常有用，它可以自动校正越界的输入。
+7.2 strtotime(), 返回时间戳。
+常用时间函数:
+time() 当前时间戳, gettimeofday()获取某一天的具体时间，getday()确定当前时间, date_sunrise()和date_sunset() 获取某地某天的日出时间和日落时间。
+</code></pre><blockquote>
+<p>   实例:date_sunset(time(), SUNFUNCS_RET_STRING, 38.4, -9, 90, 1);<br>    date(),日期格式化输出, microtime() 这个函数可以统计脚本执行时间。</p>
+</blockquote>
+<h4 id="8-文件处理系统"><a href="#8-文件处理系统" class="headerlink" title="8 文件处理系统"></a>8 文件处理系统</h4><pre><code>数据持久化方式:1.保存到文件，2.保存数据库表。
+8.1 文件属性:
+file_exists()检查文件或目录是否存在，返回true或者false。
+filesize()   取得文件大小。
+is_readble() 判断给定文件名是否可读。
+is_writable() 判断给定文件是否可写。
+is_executable() 判断给定文件是否可执行。
+filectime() 获取文件的创建时间。
+filemtime() 获取文件的修改时间。
+stat() 获取文件的大部分属性值。
+
+basename(), 返回路径中的文件名部分。string basename(string path [,string suffix]);
+dirname(),  返回去掉文件名后的目录名。
+pathinfo(), 返回一个关联数组，包含路径中的目录名，基本名，扩展名。
+</code></pre><ul>
+<li><p>遍历目录需要的函数:<br>opendir(), readdir(),closedir()和rewinddir()<br>opendir()用于打开指定目录，接受一个目录的路径及目录作为参数，函数返回值作为可供其他目录函数使用的目录句柄(资源类型)<br>readdir()用于读取指定目录，接受已经用opendir()打开的可操作的目录句柄作为参数，函数返回当前目录指针位置的一个文件名，并将目录指针向后移动一位，当指针位于目录的结尾时，没有文件返回则返回false。<br>closedir()关闭指定目录。</p>
+<p>mkdir() 通过传入目录名，建立一个新目录。<br>rmdir() 只能删除一个空目录并且目录必须存在。<br>copy() 复制目录</p>
+<p>fopen() 打开文件 fopen(string filename, string mode [, bool use_include_path [, resource zcontext]]);<br>fclose()关闭文件</p>
+<p>//todo</p>
+</li>
+</ul>
+<h4 id="9-mysql表设计"><a href="#9-mysql表设计" class="headerlink" title="9 mysql表设计"></a>9 mysql表设计</h4><pre><code>9.1 数据值的分类: 数值型， 字符型，日期型，和空值。
+9.2 索引类型:主键索引，常规索引, 唯一索引，全文索引。
+9.3 遵循三范式。
+</code></pre><ul>
+<li>联合索引:<br>比如 key(a, b, c) =&gt; a, a,b a,b,c 不能b,c 组合。<br>1.联合索引的使用在写where条件的顺序无关，mysql查询分析会进行优化而使用索引。但是减轻查询分析器的压力，最好和索引的从左到右的顺序一致。<br>2.使用等值查询，多列同时查询，索引会一直传递并生效。因此等值查询效率最好。<br>3.索引查找遵循最左侧原则。但是遇到范围查询列之后的列索引失效。<br>4.排序也能使用索引，合理使用索引排序，避免出现file sort。</li>
+</ul>
+<h4 id="10-SQL优化"><a href="#10-SQL优化" class="headerlink" title="10 SQL优化:"></a>10 SQL优化:</h4><pre><code>1.as 给字段取别名。
+2.distinct 关键字取消重复的数据。
+详细请复习19章.
+</code></pre><h4 id="11-PHP访问Mysql"><a href="#11-PHP访问Mysql" class="headerlink" title="11 PHP访问Mysql"></a>11 PHP访问Mysql</h4><pre><code>11.1 方式:面向过程:mysql 面向对象:mysqli和 PDO。
+</code></pre>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://757038689.github.io/2019/04/20/j/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2039,184 +2370,6 @@ JSON是&quot;暗号&quot;，而JSONP则是接头方式。一个是描述信息�
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://757038689.github.io/2019/04/08/a/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.Yuan">
-      <meta itemprop="description" content="秀起我的小肌肉">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="梦逍遥">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/08/a/" class="post-title-link" itemprop="url">关于PHP7新特性解析</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于:</span>
-              
-
-              
-                
-              
-
-              <time title="Erstellt: 2019-04-08 15:07:57" itemprop="dateCreated datePublished" datetime="2019-04-08T15:07:57+08:00">2019-04-08</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>PHP 7+ 版本极大地改进了性能，在一些WordPress基准测试当中，性能可以达到PHP 5.6的3倍</p>
-</blockquote>
-<h3 id="1-null合并运算符"><a href="#1-null合并运算符" class="headerlink" title="1.null合并运算符(??)"></a>1.null合并运算符(??)</h3><blockquote>
-<p>??语法: 如果变量存在且值不为NULL,它就会返回自身的值,否则返回它的第二个操作数</p>
-</blockquote>
-<p><pre><code>&lt;?php<br>  $a = $_GET[‘param’] ?? 1;<br>  //print($a); 1<br>?&gt;<br></code></pre></p>
-<h3 id="2-define-定义常量数组"><a href="#2-define-定义常量数组" class="headerlink" title="2.define() 定义常量数组"></a>2.define() 定义常量数组</h3><p><pre><code>&lt;?php<br>    define(‘array’, [<br>            ‘a’,<br>            ‘b’,<br>            ‘c’<br>    ]);<br>    //print($array[2]); c<br>?&gt;</code></pre></p>
-<h3 id="3-组合比较符-lt-gt"><a href="#3-组合比较符-lt-gt" class="headerlink" title="3.组合比较符(&lt;=&gt;)"></a>3.组合比较符(&lt;=&gt;)</h3><p><pre><code>&lt;?php<br>  //int<br>  echo 1&lt;=&gt;1;//0<br>  echo 1&lt;=&gt;2;//-1<br>  echo 2&lt;=&gt;1;//1<br>  //浮点数<br>  echo 1.2&lt;=&gt;1.2;//0<br>  //字符串<br>  echo “a”&lt;=&gt;”a” //0<br>  echo “b”&lt;=&gt;”a” //1<br>  echo “a”&lt;=&gt;”b” //-1<br>?&gt;<br></code></pre></p>
-<h3 id="4-变量类型声明"><a href="#4-变量类型声明" class="headerlink" title="4.变量类型声明"></a>4.变量类型声明</h3><blockquote>
-<p>两种模式: 强制(默认)和严格模式. 可以使用下列类型参数: string,int,float,bool</p>
-</blockquote>
-<p><pre><code><br>&lt;?php<br>  //模式声明：declare(strict_types=1);  默认情况值为0，值为1代表为严格校验的模式<br>  declare(strict_types=1);<br>  function sum(int $a, int $b){<br>    return $a+$b;<br>  }<br>  var_dum(sum(1,’1.5’));//Fatal error: Uncaught TypeError: Argument 2 passed to sum() must be of the type int, string given<br>?&gt;<br></code></pre></p>
-<h3 id="5-返回值类型声明"><a href="#5-返回值类型声明" class="headerlink" title="5.返回值类型声明"></a>5.返回值类型声明</h3><p><pre><code><br>&lt;?php<br>    //有效返回<br>    declare(strict_types=1);<br>    function getInt(int $value):int{<br>        return $value;<br>    }<br>?&gt;<br></code></pre></p>
-<h3 id="6-匿名类"><a href="#6-匿名类" class="headerlink" title="6.匿名类"></a>6.匿名类</h3><blockquote>
-<p>允许new class {} 创建一个匿名的对象. </p>
-</blockquote>
-<p><pre><code>&lt;?php<br>interface User{<br>    public function getDiscount();<br>}<br>class Goods{<br>    private $price = 200;<br>    private $objectVipUser;<br>    public function getUserData($User){<br>        $this-&gt;objectVipUser = $User;<br>        $discount = $this-&gt;objectVipUser-&gt;getDiscount();<br>        echo “商品价格:”.$this-&gt;price*$discount;<br>    }<br>}<br>$display = new Goods();<br>//new匿名对象实现user接口<br>$display -&gt;getUserData(new class implements User{<br>    private $discount = 0.6;<br>    public function getDiscount() {<br>        return $this-&gt;discount;<br>    }<br>});//商品价格:120<br>?&gt; </code></pre></p>
-<h3 id="7-Closure-call"><a href="#7-Closure-call" class="headerlink" title="7.Closure::call()"></a>7.Closure::call()</h3><blockquote>
-<p>Closure::call() 方法被添加为一个简短的方式来临时绑定一个对象作用域到一个闭包并调用它，与PHP5的bindTo相比.它的性能要快得多.</p>
-</blockquote>
-<p><pre><code>&lt;?php<br>  //php7<br>  class A {<br>    private $attribute = ‘good’;<br>  }<br>  $getClosure = function(){<br>    return $this -&gt;attribute;<br>  };<br>  echo $getClosure-&gt;all(new A);//good<br>?&gt;<br></code></pre></p>
-<h3 id="8-unserialize"><a href="#8-unserialize" class="headerlink" title="8.unserialize()"></a>8.unserialize()</h3><blockquote>
-<p>unserialize()函数:过滤的特性,可以防止非法数据进行代码注入,提供了更安全的反序列化数据</p>
-</blockquote>
-<h3 id="9-IntlChar"><a href="#9-IntlChar" class="headerlink" title="9.IntlChar"></a>9.IntlChar</h3><blockquote>
-<p>IntlChar:提供了一些可用于访问Unicode字符信息的实用方法的访问. 注意:必须安装Intl扩展才能使用!</p>
-</blockquote>
-<h3 id="10-CSPRNG"><a href="#10-CSPRNG" class="headerlink" title="10.CSPRNG"></a>10.CSPRNG</h3><blockquote>
-<p>CSPRNG 函数提供一种简单的机制来生成密码的随机数<br>random_bytes() -加密生成被保护的伪随机字符串.<br>random_int() -加密生成被保护的伪随机整数. </p>
-</blockquote>
-<h3 id="11-use-语句"><a href="#11-use-语句" class="headerlink" title="11.use 语句"></a>11.use 语句</h3><blockquote>
-<p>可以使用单个use语句从相同的命名空间导入类,函数和常量,而不是使用多个use语句.</p>
-</blockquote>
-<h3 id="12-intdiv"><a href="#12-intdiv" class="headerlink" title="12.intdiv"></a>12.intdiv</h3><blockquote>
-<p>新增加intdiv()函数,接收两个参数,返回值为第一个参数除于第二个参数的值并取整.</p>
-</blockquote>
-<h3 id="13-PHP7-错误处理"><a href="#13-PHP7-错误处理" class="headerlink" title="13.PHP7 错误处理"></a>13.PHP7 错误处理</h3><blockquote>
-<p>PHP7 改变了大多数错误的报告方式.不同于PHP5的传统错误报告机制,现在大多数错误被作为Error异常抛出.</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2263,7 +2416,7 @@ JSON是&quot;暗号&quot;，而JSONP则是接头方式。一个是描述信息�
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">总数</span>
                   </a>
                 </div>
@@ -2298,7 +2451,9 @@ JSON是&quot;暗号&quot;，而JSONP则是接头方式。一个是描述信息�
                     
                       
                     
-                    <span class="site-state-item-count">9</span>
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -2335,7 +2490,9 @@ JSON是&quot;暗号&quot;，而JSONP则是接头方式。一个是描述信息�
                     
                       
                     
-                    <span class="site-state-item-count">9</span>
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

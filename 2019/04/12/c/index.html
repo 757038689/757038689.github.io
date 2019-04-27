@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="梦逍遥">
 <meta property="og:description" content="关于redis与memached的区别 简单的区别有以下几点:   Redis不仅仅支持简单的k/v类型的数据，同时还提供list，set，zset，hash等数据结构的存储. Redis支持数据的备份，即master-slave模式的数据备份. Redis支持数据的持久化，可以将内存中的数据保持在磁盘中，重启的时候可以再次加载进行使用.   本质区别:  在Redis中，并不是所有的数据都一直存">
 <meta property="og:locale" content="Chinese[中文]">
-<meta property="og:updated_time" content="2019-04-16T10:22:04.933Z">
+<meta property="og:updated_time" content="2019-04-27T13:54:53.761Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PHP面试遇到的问题整理一">
 <meta name="twitter:description" content="关于redis与memached的区别 简单的区别有以下几点:   Redis不仅仅支持简单的k/v类型的数据，同时还提供list，set，zset，hash等数据结构的存储. Redis支持数据的备份，即master-slave模式的数据备份. Redis支持数据的持久化，可以将内存中的数据保持在磁盘中，重启的时候可以再次加载进行使用.   本质区别:  在Redis中，并不是所有的数据都一直存">
@@ -388,7 +388,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-04-16 18:22:04" itemprop="dateModified" datetime="2019-04-16T18:22:04+08:00">2019-04-16</time>
+                <time title="Geändert am: 2019-04-27 21:54:53" itemprop="dateModified" datetime="2019-04-27T21:54:53+08:00">2019-04-27</time>
               
             
           </span>
@@ -470,6 +470,9 @@
 <li><p>关于不同语言的客户端支持<br>在不同语言的客户端方面，Memcached和Redis都有丰富的第三方客户端可供选择，不过因为Memcached发展的时间更久一些，目前看在客户端支持方面，Memcached的很多客户端更加成熟稳定，而Redis由于其协议本身就比Memcached复杂，加上作者不断增加新的功能等，对应第三方客户端跟进速度可能会赶不上，有时可能需要自己在第三方客户端基础上做些修改才能更好的使用。根据以上比较不难看出，当我们不希望数据被踢出，或者需要除key/value之外的更多数据类型时，或者需要落地功能时，使用Redis比使用Memcached更合适。</p>
 </li>
 </ol>
+<blockquote>
+<p>   关于redis的持久化:<br>    方式一:RDB,Redis会定期保存数据快照至一个rbd文件中，并在启动时自动加载rdb文件，恢复之前保存的数据。【默认开启的】<br>    方式二:AOF,采用AOF持久方式时，Redis会把每一个写请求都记录在一个日志文件里。在Redis重启时，会把AOF文件中记录的所有写操作顺序执行一遍，确保数据恢复到最新。【默认关闭的】    </p>
+</blockquote>
 <ul>
 <li>总结:</li>
 </ul>
